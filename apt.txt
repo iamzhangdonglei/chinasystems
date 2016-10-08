@@ -1,0 +1,39 @@
+
+1
+sudo apt-get update
+报了一堆错误：
+
+1
+2
+3
+4
+5
+Err http://cn.archive.ubuntu.com trusty InRelease
+Err http://cn.archive.ubuntu.com trusty-updates InRelease
+Err http://cn.archive.ubuntu.com trusty-backports InRelease
+Err http://cn.archive.ubuntu.com trusty Release.gpg     
+W: Failed to fetch http://cn.archive.ubuntu.com/ubuntu/dists/trusty/InRelease
+错误显示了源有问题，好像是被墙了。
+
+查找解决办法，修改/etc/apt/source.list文件。将源改成163的或者阿里的：
+
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+deb http://mirrors.163.com/ubuntu/ vivid main restricted universe multiverse
+deb http://mirrors.163.com/ubuntu/ vivid-security main restricted universe multiverse
+deb http://mirrors.163.com/ubuntu/ vivid-updates main restricted universe multiverse
+deb http://mirrors.163.com/ubuntu/ vivid-proposed main restricted universe multiverse
+deb http://mirrors.163.com/ubuntu/ vivid-backports main restricted universe multiverse
+deb-src http://mirrors.163.com/ubuntu/ vivid main restricted universe multiverse
+deb-src http://mirrors.163.com/ubuntu/ vivid-security main restricted universe multiverse
+deb-src http://mirrors.163.com/ubuntu/ vivid-updates main restricted universe multiverse
+deb-src http://mirrors.163.com/ubuntu/ vivid-proposed main restricted universe multiverse
+deb-src http://mirrors.163.com/ubuntu/ vivid-backports main restricted universe multiverse
