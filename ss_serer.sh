@@ -1,3 +1,4 @@
+#https://www.puteulanus.com/archives/811
 #!/bin/bash
 
 # 安装依赖
